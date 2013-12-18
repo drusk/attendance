@@ -1,12 +1,10 @@
 extends base
 
-mixin centered_link_button(url, text)
-  div(style='text-align: center')
-    a(href=url, style='float: none').btn.btn-default.btn-success #{text}
+include components
 
 block content
-  .container
-    h1(align='center') #{title}
-    h4(align='center') <i>A web app for taking attendance</i>
+  h1(align='center') #{title}
+  h4(align='center') <i>A web app for taking attendance</i>
 
-    +centered_link_button('#', 'A nice button')
+  br
+  +centered_link_button('/organizations', 'Organizations')

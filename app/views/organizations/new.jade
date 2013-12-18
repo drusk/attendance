@@ -1,0 +1,9 @@
+extends ../base
+
+block content
+  br
+  form(method='post', action='/organizations')
+    .form-group
+      label(for='name') Name
+      input.form-control(type='text', name='name', placeholder='Enter organization name')
+    button.btn.btn-default(type='submit') Submit

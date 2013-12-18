@@ -1,0 +1,16 @@
+extends ../base
+
+include ../components
+
+block content
+  h1 Organizations
+
+  ul
+    for organization in organizations
+      li
+        a(href='/organizations/#{organization._id}') #{organization.name}
+     else
+       li No organizations.
+
+  br
+  +centered_link_button('/organizations/new', 'Create Organization')
